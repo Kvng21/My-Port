@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 200);
             
             clearInterval(sliderInterval);
-            resume = false; // Reset resume flag
             lastTimeClicked = Date.now();
         }
     });    
@@ -108,10 +107,9 @@ document.addEventListener("DOMContentLoaded", () => {
         let currentTime = Date.now();
         let timeDuration =100000; // Set a 2mins duration to wait before resuming auto-slide
         
-        if(!resume&&currentTime - lastTimeClicked >= timeDuration) {
+        if(currentTime - lastTimeClicked >= timeDuration) {
             clearInterval(sliderInterval); // Clear the interval to stop auto-slide
             startSlider(); // Restart the slider after 2 minutes of inactivity
-            resume = true; // Set resume to true to indicate slider has resumed auto-slide
         }
         
         
@@ -242,7 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const skillNav = document.querySelector('.skill-nav-container');
     
             if(type === 'contact'){
-                contactBody.style.display = 'block';
+                contactBody.style.display = 'flex';
                 skillbody.style.display = 'none'; 
     
                 contactNav.classList.remove('nav-change');

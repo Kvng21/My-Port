@@ -423,9 +423,18 @@
                         <div id = "contact-container">
                             
                             <div id="contact-text">
-                                <p>Have an interesting project? I would love to hear about it!</p>
+                                
+                                <p>Please use the contact form below if you have any questions</p> 
+                                <p>or requests concerning my services. Or, better yet,feel free</p> 
+                                <p>to send me a direct message via WhatsApp or email.</p>
+
+                                <div class="contact-bottom-text" >
+                                    <p>I’ll respond to your message within 24 hours.<p>
+                                    <p>Thank you!</p>
+                                </div>
+                                
                             </div>
-                        
+                            
                             <div id="contact-image-container">
                             
                                 <div class = "contact-image contact-image1">
@@ -441,7 +450,7 @@
                                     <a href="https://github.com/Kvng21" target="_blank">
                                         <img src="images/social_github_icon.png">
                                     </a>
-
+                                    
                                 </div>
 
                                 <div class = "contact-image contact-image3">
@@ -449,9 +458,39 @@
                                     <a href="mailto:sam4real21@gmail.com" target="_blank">
                                         <img src="images/1181190_email_gmail_google_mail_icon.png">
                                     </a>
-
+                                    
                                 </div>
                             
+                            </div>
+
+                            <div id="contact-form">
+                                <p>Have an interesting project? I would love to hear about it!</p>
+
+                                
+                                <form action="your-form-handler.php" method="POST" class="contact-form">
+                                    
+                                    <span id="form-name">
+                                        <label for="name">Name:</label>
+                                        <input type="text" id="name" name="name" required >
+                                    </span>
+    
+                                    <span id="form-email">
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </span>
+    
+                                    <span id="form-phone">
+                                        <label for="whatsapp">WhatsApp Number:</label>
+                                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1234567890" required>
+                                    </span>
+
+                                    <span id="form-message">
+                                        <label for="message">Message:</label>
+                                        <textarea id="message" name="message" rows="5" required></textarea>
+                                    </span>
+    
+                                    <button type="submit">Send Message</button>
+                                </form>
                             </div>
 
                         </div>
