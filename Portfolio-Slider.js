@@ -218,6 +218,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const contactLink = document.getElementById('contact-nav-Text');
         const skillLink = document.getElementById('skill-nav-Text');
         const contactNav = document.querySelector('.contact-nav-container');
+        const footer = document.querySelector('footer');
+        const lastContainer = document.querySelector('#last-container');
+        
+
         let type = 'new';
         
         if(type === 'new'){
@@ -234,14 +238,18 @@ document.addEventListener("DOMContentLoaded", () => {
             linkswap(type);
         }
         
+
+
         const linkswap = (type) => {
             const contactBody = document.getElementById('contact-container');
             const skillbody = document.getElementById('skill-container');
             const skillNav = document.querySelector('.skill-nav-container');
-    
             if(type === 'contact'){
                 contactBody.style.display = 'flex';
                 skillbody.style.display = 'none'; 
+                
+                footer.style.height = '100rem';
+                lastContainer.style.marginTop = '25rem';
     
                 contactNav.classList.remove('nav-change');
                 skillNav.classList.add('nav-change');
@@ -250,7 +258,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 contactBody.style.display = 'none';
                 skillbody.style.display = 'block'; 
     
-    
+                footer.style.height = '185rem';
+                lastContainer.style.marginTop = '2rem';
+
                 skillNav.classList.remove('nav-change');
                 contactNav.classList.add('nav-change');
             }
