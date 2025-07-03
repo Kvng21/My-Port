@@ -238,7 +238,7 @@ a:hover{
 
 @keyframes slidedown{
     from{transform: translateY(-150%);}
-
+    
     to{transform: translateY(0%);}
 }
 
@@ -247,6 +247,7 @@ a:hover{
 /*Main*/
 #projects{
     opacity: 0;
+    margin-bottom: 15rem;
 }
 
 .projectAni{
@@ -1191,11 +1192,6 @@ footer{
     #header-banner{
         margin-top: 8.5rem;
     }
-    
-    #projects{
-        margin-bottom: 27rem;
-    }
-    
 }
 
 @media (max-width: 535px) {
