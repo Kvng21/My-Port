@@ -226,6 +226,9 @@ document.addEventListener("DOMContentLoaded", () => {
         
         if(type === 'new'){
             contactNav.classList.add('nav-change');
+            footer.style.height = '180rem';
+            lastContainer.style.marginTop = '3rem';
+
         }
     
         contactLink.onclick = function() { 
@@ -248,8 +251,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 contactBody.style.display = 'flex';
                 skillbody.style.display = 'none'; 
                 
-                footer.style.height = '100rem';
-                lastContainer.style.marginTop = '25rem';
+                footer.style.height = '90rem';
+                lastContainer.style.marginTop = '15rem';
     
                 contactNav.classList.remove('nav-change');
                 skillNav.classList.add('nav-change');
@@ -258,8 +261,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 contactBody.style.display = 'none';
                 skillbody.style.display = 'block'; 
     
-                footer.style.height = '185rem';
-                lastContainer.style.marginTop = '2rem';
+                footer.style.height = '180rem';
+                lastContainer.style.marginTop = '3rem';
 
                 skillNav.classList.remove('nav-change');
                 contactNav.classList.add('nav-change');
@@ -272,6 +275,26 @@ document.addEventListener("DOMContentLoaded", () => {
     footerSwap();
 
 
-
+    const viewResponsiveWidth = () => {
+        const observer = new IntersectionObserver((entries) => {
+                
+            entries.forEach(entry => {
+                // Calculate visibility ratio up to 50% max
+                let ratio = Math.min(entry.intersectionRatio, 0.5); // cap at 0.5
+        
+                // Convert ratio to percentage (0.0 to 0.5 → 0% to 100%)
+                let widthPercent = (ratio / 0.5) * 100;
+        
+                // Apply that as the element's width
+                entry.target.style.width = `${widthPercent}%`;
+            });
+            
+        }, { threshold: Array.from({ length: 51 }, (_, i) => i / 100) /* 0.00 → 0.50 in 0.01 steps*/ });
+        
+        const target = document.querySelector('.my-element');
+            if (target) observer.observe(target);
+    };
+    
+    viewResponsiveWidth();
 
 });

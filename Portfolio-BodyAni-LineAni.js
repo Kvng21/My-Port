@@ -91,7 +91,7 @@ window.onload = () => {
         }
         
         lineSliderAnimation();
-    }, 300);
+    }, 1000);
 
     
 }

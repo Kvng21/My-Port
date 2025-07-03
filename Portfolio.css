@@ -29,7 +29,7 @@ body{
     padding: 2rem;
     box-shadow: 15px 15px 15px;
     z-index: 5;
-    width: 75rem;
+    width: 80rem;
 }
 
 @keyframes text-focus-in {
@@ -695,7 +695,7 @@ footer{
     flex-wrap: wrap;
     gap: 5rem;
     margin-left: 1rem;
-    margin-top: 20rem;
+    margin-top: 10rem;
 }
 
 .skill-image{
@@ -719,6 +719,8 @@ footer{
     margin-top: 5rem;
     display: flex;
     background-color: wheat;
+    background-image: url('images/Blue Flowers Wallpap.png');
+    background-repeat: no-repeat;
     width: 100%;
     border-radius: 1rem;
     padding: 3rem 5rem;
@@ -738,8 +740,9 @@ footer{
     display: flex;
     flex-direction: column;
     font-size: 2rem;
-    color: black;
+    color: beige;
     width: 50%;
+    border-right: 0.1rem solid black;
     letter-spacing: 0.2rem;
     line-height: 2.9rem;
 }
@@ -764,6 +767,11 @@ footer{
     display: block;
     cursor:pointer;
     transition: transform 0.4s ease-in-out;
+}
+
+.contact-image a{
+    text-decoration: none;
+    color: black;
 }
 
 .contact-image1{
@@ -795,9 +803,9 @@ footer{
     gap: 1rem;
     width:45%;
     font-family: 'Slabo 27px', serif;
-    color: black;
+    color: beige;
     font-size: 1.5rem;
-    margin-left: 8rem;
+    margin-left: 2rem;
 }
 
 .contact-form{
@@ -844,7 +852,7 @@ footer{
 
 .contact-form input,
 .contact-form textarea {
-    padding: 0.3rem;
+    padding: 0.8rem;
     border: none;
     border-radius: 5px;
     font-size: 2rem;
@@ -856,7 +864,7 @@ footer{
     background-color: black;
     color: white;
     border: none;
-    width: 27.5rem;
+    max-width: 35rem;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
@@ -870,7 +878,6 @@ footer{
 #last-container{
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
 }
 
 #last-text{
@@ -900,9 +907,6 @@ footer{
     }
     
     
-    .main-banner{
-        width: 80rem;
-    }
 }
 
 @media (min-width: 1901px) and (max-width: 2100px) {
@@ -911,9 +915,6 @@ footer{
     }
     
     
-    .main-banner{
-        width: 80rem;
-    }
 }
 
 /*ASUS ZENBOOK FOLD(IN FOLDED FORM)*/
@@ -923,9 +924,6 @@ footer{
     }
     
     
-    .main-banner{
-        width: 80rem;
-    }
 }
 
 @media (min-width: 1690px) {
@@ -1050,8 +1048,6 @@ footer{
         width: 70%;
     }   
 
-  
-    
 }
 
 
@@ -1115,7 +1111,7 @@ footer{
 
 @media (max-width: 700px) {
     html{
-        font-size: 7.4px;
+        font-size: 8px;
     }
     
     #skill-text{
@@ -1135,6 +1131,9 @@ footer{
         margin-left: 7rem;
     }
 
+    #header-banner{
+        width: 90%;
+    }
 
 }
 
@@ -1147,21 +1146,22 @@ footer{
 
 @media (max-width: 670px) {
     html{
-        font-size: 6.8px;
+        font-size: 7.7px;
     }
 }
+
 
 
 @media (max-width: 630px) {
     html{
-        font-size: 6.2px;
+        font-size: 7.3px;
     }
-    
+
 }
 
 @media (max-width: 605px) {
     html{
-        font-size: 6.4px;
+        font-size: 6.8px;
     }
     
     .main-banner{
@@ -1173,7 +1173,7 @@ footer{
 @media (max-width: 590px) {
     
     html{
-        font-size: 6px;
+        font-size: 6.7px;
     }
 }
 
@@ -1182,7 +1182,7 @@ footer{
 /*SURFACE DUO*/
 @media (max-width: 550px) {
     html{
-        font-size: 5.5px;
+        font-size: 6.2px;
     }
     
     .main-banner{
@@ -1215,7 +1215,7 @@ footer{
 
 @media (max-width: 500px) {
     html{
-        font-size: 5.1px;
+        font-size: 5.8px;
     }
     
     
@@ -1241,7 +1241,7 @@ footer{
 /**/
 @media (max-width: 470px) {
     html{
-        font-size: 4.7px;
+        font-size: 5.4px;
     }
 
 }
@@ -1251,6 +1251,9 @@ footer{
 
 /*IPHONE 14 PRO MAX*/
 @media (max-width: 440px) {
+    html{
+        font-size: 5.3px;
+    }
     
     .main-banner{
         width: 80rem;
@@ -1260,7 +1263,7 @@ footer{
 
 @media (max-width: 435px) {
     html{
-        font-size: 4.3px;
+        font-size: 5px;
     }
 }
 
@@ -1268,12 +1271,13 @@ footer{
 /*IPHONE XR*/
 @media (max-width: 415px) {
     html{
-        font-size: 4px;
+        font-size: 4.7px;
     }
     
     .main-banner{
         width: 80rem;
     }
+    
 }
 
 
@@ -1281,7 +1285,7 @@ footer{
 /*IPHONE SE*/
 @media (max-width: 400px) {
     html{
-        font-size: 3.8px;
+        font-size: 4.5px;
     }
     
     .main-banner{
@@ -1294,7 +1298,7 @@ footer{
 /*SAMSUNG S8+*/
 @media (max-width: 365px) {
     html{
-        font-size: 3.8px;
+        font-size: 4.2px;
     }
     
     .main-banner{
@@ -1313,7 +1317,7 @@ footer{
 /*GALAXY Z FOLD 5*/
 @media (max-width: 345px) {
     html{
-        font-size: 3.2px;
+        font-size: 4px;
     }
     
     
@@ -1324,18 +1328,32 @@ footer{
 
 @media (max-width: 325px) {
     html{
-        font-size: 3px;
+        font-size: 3.6px;
+    }
+
+}
+
+@media (max-width: 300px) {
+    html{
+        font-size: 3.4px;
     }
 }
 
 @media (max-width: 280px) {
     html{
-        font-size: 2.7px;
+        font-size: 3.2px;
     }
 }
 
-@media (max-width: 250px) {
+
+@media (max-width: 265px) {
     html{
-        font-size: 2.3px;
+        font-size: 3px;
+    }
+}
+
+@media (max-width: 245px) {
+    html{
+        font-size: 2.7px;
     }
 }
