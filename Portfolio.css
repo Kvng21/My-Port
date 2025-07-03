@@ -5,6 +5,9 @@
 body{
     background-color:  #031930;
     width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
 }
 
 .body-banner-all{
@@ -14,7 +17,7 @@ body{
     font-style: normal;
     background-color:  #031930;
     justify-content: center;
-    
+    overflow: hidden;
 }
 /*HEADER*/
 #header-banner{
@@ -60,7 +63,6 @@ body{
 #header-banner{
     display: flex;
     width: 80%;
-    height: 100%;
     overflow: hidden;
 }
 
@@ -244,7 +246,6 @@ a:hover{
 
 /*Main*/
 #projects{
-    margin-bottom: 15rem;
     opacity: 0;
 }
 
@@ -355,7 +356,7 @@ a:hover{
 .slider-container {
     display: flex;
     width: 55rem;
-    height: 30rem;
+    height: 33rem;
     align-items: center;  
 }
 
@@ -369,7 +370,7 @@ a:hover{
     scroll-behavior: smooth;/*Enables smooth scrolling for the container*/
     scroll-snap-type: y mandatory;
     overflow-x: hidden;
-    height: 30rem;
+    height: 32rem;
     opacity: 0;
 }
 
@@ -401,7 +402,7 @@ a:hover{
     display: inline-block;
     overflow: hidden;
     border: 1px solid wheat;
-    height: 29rem;
+    height: 30rem;
     scroll-snap-align: start;
     flex: 1 0 100%;
 }
@@ -413,7 +414,7 @@ a:hover{
 
 .ver-img-nav{
     display: inline-flex;
-    height: 10rem;
+    height: 13rem;
     width: 20rem;
     margin-top: 2rem;
     flex-wrap: wrap;
@@ -430,7 +431,7 @@ a:hover{
     display: flex;
     border: 1px solid wheat;
     width: 7rem;
-    height: 5rem;
+    height: 6rem;
     opacity: 0.6;
 }
 
@@ -502,11 +503,11 @@ a:hover{
 
 
 /*SKILLS*/
-
 footer{
     font-family: "Slabo 27px", serif;
     z-index: 1;
     background-color: hsla(210, 92%, 8%, 1);
+    overflow: hidden;
 }
 
 #skills-contact-nav-banner{
@@ -526,13 +527,11 @@ footer{
     opacity: 1;
     width: 100%;
     text-align: center;
-    height: 100%;
 }
 
 .nav-Text a{
     text-decoration: none;
     width: 100%;
-    height: 100%;
     margin-top: 0.7rem;
 }
 
@@ -566,7 +565,6 @@ footer{
     justify-content: center;
     background-color: hsla(210, 92%, 8%, 1);
     width: 20rem;
-    height: 100%;
 }
 
 
@@ -607,13 +605,10 @@ footer{
 #skill-text{
     font-family: serif;
     color: wheat;
-    line-height: 1.8;
     font-size: 1.3rem;
     letter-spacing: 0.2rem;
-    margin-bottom: 5rem;
     margin-top: 10rem;
     width: 100%;
-    
 }
 
 #skill-text ul{
@@ -681,13 +676,14 @@ footer{
 
 #Familiar-list {
     margin-top: 15rem;
+    overflow: hidden;
 }
 
 #Familiar-list ul{
     margin-left: 7rem;
     line-height: 4;
     margin-top: 2rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 #skill-image-container{
@@ -695,7 +691,7 @@ footer{
     flex-wrap: wrap;
     gap: 5rem;
     margin-left: 1rem;
-    margin-top: 10rem;
+    margin-top: 17rem;
 }
 
 .skill-image{
@@ -713,6 +709,7 @@ footer{
     display: none;
     width: 100%;
     padding: 5rem;
+    overflow: hidden;
 }
 
 #contact-banner{
@@ -727,6 +724,7 @@ footer{
     align-items: center;
     justify-content: center;
     opacity: 0.8;
+    overflow: hidden;
 }
 
 #contact-image-container{
@@ -878,6 +876,7 @@ footer{
 #last-container{
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 #last-text{

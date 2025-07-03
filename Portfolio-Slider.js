@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         if(type === 'new'){
             contactNav.classList.add('nav-change');
-            footer.style.height = '180rem';
+            footer.style.height = '200rem';
             lastContainer.style.marginTop = '3rem';
 
         }
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 contactBody.style.display = 'none';
                 skillbody.style.display = 'block'; 
     
-                footer.style.height = '180rem';
+                footer.style.height = '200rem';
                 lastContainer.style.marginTop = '3rem';
 
                 skillNav.classList.remove('nav-change');
