@@ -18,7 +18,14 @@ body{
     background-color:  #031930;
     justify-content: center;
     overflow: hidden;
+    transform-origin: center;
 }
+
+.body-banner-ani{
+    transition: width 0.4s ease, opacity 0.4s ease transform 0.4s ease;
+}
+
+
 /*HEADER*/
 #header-banner{
     margin-top: 3.5rem;
@@ -617,6 +624,10 @@ footer{
     padding: 0;
 }
 
+.skill-Ani{
+    transition: opacity 0.3s;
+}
+
 .skill-list-container{
     display: flex;
     flex-direction: column;
@@ -692,7 +703,7 @@ footer{
     flex-wrap: wrap;
     gap: 5rem;
     margin-left: 1rem;
-    margin-top: 17rem;
+    margin-top: 12rem;
 }
 
 .skill-image{
@@ -724,9 +735,27 @@ footer{
     padding: 3rem 5rem;
     align-items: center;
     justify-content: center;
-    opacity: 0.8;
+    opacity: 0;
     overflow: hidden;
 }
+
+.contact-banner-Ani{
+    animation: puff-in-center 1s ease-out forwards;
+}
+
+@keyframes puff-in-center {
+    0% {
+        transform: scale(1.2);
+        filter: blur(4px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 0.8;
+    }
+}
+
 
 #contact-image-container{
     display: flex;
@@ -1066,7 +1095,7 @@ footer{
         width: 80%;
     }   
 
-
+    
 }
 
 
@@ -1080,6 +1109,11 @@ footer{
     .main-banner{
         width: 80rem;
     }
+
+    .only-skillimage-remove{
+        display: none;
+    }
+
 }
 
 /*Nexus 10*/
@@ -1101,6 +1135,7 @@ footer{
     .main-banner{
         width: 80rem;
     }
+
 }
 
 @media (max-width: 745px) {
@@ -1118,23 +1153,23 @@ footer{
         line-height: 1.8;
         font-size: 2.3rem;
     }
-
+    
     .skill-list-text p{
         font-size: 1.5rem;
     }
-
+    
     .first-video{
         margin-left: 13rem;
     }  
-
+    
     .third-video{
         margin-left: 7rem;
     }
-
+    
     #header-banner{
         width: 90%;
     }
-
+    
 }
 
 @media (max-width: 685px) {
@@ -1156,7 +1191,7 @@ footer{
     html{
         font-size: 7.3px;
     }
-
+    
 }
 
 @media (max-width: 605px) {
@@ -1174,6 +1209,10 @@ footer{
     
     html{
         font-size: 6.7px;
+    }
+
+    .skill-image-remove{
+        display: none;
     }
 }
 

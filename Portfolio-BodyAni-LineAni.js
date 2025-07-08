@@ -1,5 +1,6 @@
 //Window.onload is used to load the lines properly on the page load
-window.onload = () => {  
+document.addEventListener("DOMContentLoaded", () => {    
+
     setTimeout(() => {
 
         const headerBanner = document.getElementById('header-banner')
@@ -94,4 +95,4 @@ window.onload = () => {
     }, 1000);
 
     
-}
+},)

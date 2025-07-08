@@ -212,87 +212,79 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     sliderImgAndAnimation(false)
 
-
-
-    const footerSwap = () => {
-        const contactLink = document.getElementById('contact-nav-Text');
-        const skillLink = document.getElementById('skill-nav-Text');
-        const contactNav = document.querySelector('.contact-nav-container');
-        const footer = document.querySelector('footer');
-        const lastContainer = document.querySelector('#last-container');
-        
-
-        let type = 'new';
-        
-        if(type === 'new'){
-            contactNav.classList.add('nav-change');
-            footer.style.height = '185rem';
-            lastContainer.style.marginTop = '3rem';
-
-        }
-    
-        contactLink.onclick = function() { 
-            type = 'contact';
-            linkswap(type);
-        }
-    
-        skillLink.onclick = function() {
-            type = 'skill';
-            linkswap(type);
-        }
-        
-
-
-        const linkswap = (type) => {
-            const contactBody = document.getElementById('contact-container');
-            const skillbody = document.getElementById('skill-container');
-            const skillNav = document.querySelector('.skill-nav-container');
-            if(type === 'contact'){
-                contactBody.style.display = 'flex';
-                skillbody.style.display = 'none'; 
-                
-                footer.style.height = '90rem';
-                lastContainer.style.marginTop = '15rem';
-    
-                contactNav.classList.remove('nav-change');
-                skillNav.classList.add('nav-change');
-            }
-            else if(type === 'skill'){
-                contactBody.style.display = 'none';
-                skillbody.style.display = 'block'; 
-    
-                footer.style.height = '185rem';
-                lastContainer.style.marginTop = '3rem';
-
-                skillNav.classList.remove('nav-change');
-                contactNav.classList.add('nav-change');
-            }
-            
-        }
-        
-    }
-    
-    footerSwap();
-
-
     const viewResponsiveWidth = () => {
+        const bodyBanner = document.querySelectorAll('.body-banner-all');
+        const line = document.querySelector('.line-banner');
+
         const observer = new IntersectionObserver((entries) => {
                 
             entries.forEach(entry => {
-                // Calculate visibility ratio up to 50% max
-                let ratio = Math.min(entry.intersectionRatio, 0.5); // cap at 0.5
-        
-                // Convert ratio to percentage (0.0 to 0.5 → 0% to 100%)
-                let widthPercent = (ratio / 0.5) * 100;
-        
-                // Apply that as the element's width
-                entry.target.style.width = `${widthPercent}%`;
+                const el = entry.target;
+                
+                
+                if (entry.isIntersecting) {
+                    el.classList.add('body-banner-ani');
+                    void el.offsetWidth; // Force reflow
+                    el.classList.add('body-banner-ani');
+
+                    
+                    // Calculate visibility ratio up to 50% max
+                    let ratio = Math.min(entry.intersectionRatio, 1);
+                    let scale = 0.90 + ratio * 0.10;
+                    let opacityLevel = 0.2 + ratio * 1;
+            
+                    el.style.transform = `scaleX(${scale})`;
+                    el.style.opacity = opacityLevel;
+                } else {
+                    // Reset styles when element leaves viewport
+                    el.style.transform = 'scaleX(0.9)';
+                    el.style.opacity = '0.4';
+                }
+
             });
             
-        }, { threshold: Array.from({ length: 51 }, (_, i) => i / 100) /* 0.00 → 0.50 in 0.01 steps*/ });
+        }, { threshold: Array.from({ length: 101 }, (_, i) => i / 100) /* 0.00 → 0.01 in 0.01 steps*/ });
         
-        const target = document.querySelector('.my-element');
-            if (target) observer.observe(target);
+        bodyBanner.forEach(Banner => {
+            if (Banner) observer.observe(Banner);
+        },);
+
+
+        //second observer    
+        setTimeout(() => {
+
+            const observer2 = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+    
+                    const el = entry.target;
+                    
+                    if (entry.isIntersecting) {
+                        el.classList.add('body-banner-ani');
+                        void el.offsetWidth; // Force reflow
+                        el.classList.add('body-banner-ani');
+                        
+                        
+                        // Calculate visibility ratio up to 50% max
+                        let ratio = Math.min(entry.intersectionRatio, 1);
+                        
+                        // Convert ratio to percentage (0.0 to 1 → 0% to 100%)
+                        let opacityLevel = 0.0 + ratio * 1;
+                
+                        el.style.opacity = opacityLevel;
+                    } 
+                    else {
+                        // Reset styles when element leaves viewport
+                        el.style.opacity = '0.4';
+                    }
+    
+                });
+                
+            }, { threshold: Array.from({ length: 101 }, (_, i) => i / 100) /* 0.00 → 0.50 in 0.01 steps*/ });
+            
+                if (line) observer2.observe(line);
+
+        }, 10000)
+            //if () observer2.observe();    
     };
     
     viewResponsiveWidth();
