@@ -520,7 +520,7 @@ footer{
     z-index: 1;
     background-color: hsla(210, 92%, 8%, 1);
     overflow: hidden;
-    height: auto;
+    height: 100%;
 }
 
 #skills-contact-nav-banner{
