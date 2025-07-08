@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if(type === 'new'){
             contactNav.classList.add('nav-change');
 
-            footer.style.height = '175rem';
             lastContainer.style.marginTop = '2rem';
 
         }
@@ -40,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 contactBody.style.display = 'flex';
                 skillbody.style.display = 'none'; 
                 
-                footer.style.height = '90rem';
                 lastContainer.style.marginTop = '15rem';
     
                 contactNav.classList.remove('nav-change');
@@ -53,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 contactBody.style.display = 'none';
                 skillbody.style.display = 'block'; 
     
-                footer.style.height = '175rem';
                 lastContainer.style.marginTop = '2rem';
 
                 skillNav.classList.remove('nav-change');

@@ -2,7 +2,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
+html,body{
     background-color:  #031930;
     width: 100%;
     height: auto;
@@ -22,7 +22,8 @@ body{
 }
 
 .body-banner-ani{
-    transition: width 0.4s ease, opacity 0.4s ease transform 0.4s ease;
+    transition: opacity 0.4s ease transform 0.4s ease;
+    will-change: transform, opacity; /* Hint to browser that transform will change */
 }
 
 
@@ -516,6 +517,7 @@ footer{
     z-index: 1;
     background-color: hsla(210, 92%, 8%, 1);
     overflow: hidden;
+    height: auto;
 }
 
 #skills-contact-nav-banner{
