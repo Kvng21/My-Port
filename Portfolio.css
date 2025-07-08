@@ -1270,7 +1270,9 @@ footer{
         margin-left: 0;
     }
     
-    
+    #projects{
+        margin-bottom:10rem;
+    }
 
 }
 
